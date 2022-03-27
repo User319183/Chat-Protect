@@ -47,3 +47,7 @@ The help guide for using Chat Protect
 11. view_bypass
 
 11A. Usage: `/view_bypass`. This command's purpose is to view all the bypassed channels, roles, and users the bot has bypassed.
+
+12. update_strikes
+
+12A. Usage: `/update_strikes THE_MEMBER_TO_UPDATE_STRIKES_TO THE_AMOUNT_OF_STRIKES`. This command's purpose is to view all the bypassed channels, roles, and users the bot has bypassed.
