@@ -1,7 +1,7 @@
 
 Configuring the bot
 ========
-Chat Protect has so much to make it flexible. Let's go through the configure command!
+Chat Protect has so much to make it flexible. Let's go through the configure commands!
 
 Bypassing
 ========
