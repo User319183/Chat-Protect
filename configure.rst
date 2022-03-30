@@ -73,7 +73,7 @@ Currently, you can view & add strikes to users. Viewing strikes means you can vi
 add or remove any amount of strikes to a user. 
 
 .. image:: https://github.com/User319183/Chat-Protect/blob/main/assets/update_strikes.png
-  :width: 40
+  :width: 400
   
 .. image:: https://github.com/User319183/Chat-Protect/blob/main/assets/view_strikes.png
   :width: 400
