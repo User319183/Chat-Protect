@@ -8,7 +8,7 @@ As said above, Chat Protect focuses on protecting your server's chat. The main f
 that other Discord bots don't give you. This bot contains a strike system, a way to easily disable/enable warn embeds, a way to bypass roles, users, and channels,
 a way to view & update a members strikes, etc. The bot also comes with pre-built censor lists for bad words, racisim, and toxicity. 
 
-`Join our Discord server for the latest news & bug fixes! <https://discord.gg/mJ3pMYuv8e>`_
+`Join our Discord server for the latest news & bug fixes! <https://discord.gg/ecz2z36gkB>`_
 
 **Documentation**
 
