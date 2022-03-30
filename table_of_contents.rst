@@ -4,26 +4,21 @@ This is everything that has been went over during this documentation. Missed som
 
 
 
-About the extension
+About the bot
 ========
-`Click on this link to see information about this extension. <https://github.com/User319183/Profanity-Blocker_Extension.Docs/blob/main/about.rst>`_
+`Click on this link to see information about this bot. <https://github.com/User319183/Chat-Protect/blob/main/about.rst>`_
 
 
-Downloading the extension
+Inviting the bot
 ========
-`Click on this link to learn how to download this extension. <https://github.com/User319183/Profanity-Blocker_Extension.Docs/blob/main/downloading.rst>`_
+`Click on this link to learn how to invited the bot. <https://github.com/User319183/Chat-Protect/blob/main/inviting.rst>`_
 
 
-Setting up the extension
+Setting up the bot
 ========
-`Click on this link to learn how to set the extension up. <https://github.com/User319183/Profanity-Blocker_Extension.Docs/blob/main/setup.rst>`_ 
+`Click on this link to learn how to set the bot up. <https://github.com/User319183/Chat-Protect/blob/main/setup.rst>`_ 
 
 
-Configuring the extension
+Configuring the bot
 ========
-`Click on this link to learn how to configure the extension. <https://github.com/User319183/Profanity-Blocker_Extension.Docs/blob/main/configure.rst>`_
-
-
-Common issues
-========
-`Click on this link to learn how to fix any common issues found. <https://github.com/User319183/Profanity-Blocker_Extension.Docs/blob/main/common_issues.rst>`_
+`Click on this link to learn how to configure the bot. <https://github.com/User319183/Chat-Protect/blob/main/configure.rst>`_
