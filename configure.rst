@@ -41,8 +41,8 @@ cleared. Each word can still be added back.
 Embeds
 ========
 When doing `/embeds` you will get an option called `set`. Then after pressing the command you will get `enabled` and `disabled`. If you want the censor message
-to show when a member says a blacklisted word this will show them the message. If you don't, you can set this to `disabled`. By default, the censor message will 
-show. No matter the setting, +1 will be added to the user's amount of strikes.
+to show when a member says a blacklisted word this will show them the message. If you don't, you can set this to `disabled`. By default, the censor message will
+not show. No matter the setting, +1 will be added to the user's amount of strikes.
 
 .. image:: https://github.com/User319183/Chat-Protect/blob/main/assets/embeds.png
   :width: 400
