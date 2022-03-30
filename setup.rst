@@ -1,5 +1,5 @@
 
-Setting up the extension
+Setting up the bot
 ========
 Currently, Chat Protect is not so neat when it comes to finding the commands you want to quickly find. Which is why this will should help you in someway.
 
