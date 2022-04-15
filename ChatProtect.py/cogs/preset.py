@@ -1,46 +1,8 @@
 import discord
-
 from discord.ext import commands
-
-from discord import Embed, activity
-
 from discord.commands import Option
-
-import os
-import sys
-
-import json
-
-import asyncio as asyncio
-
-import re
-import string
-
-
-from discord.ext import *
-from discord.ext.commands import *
-from ctypes import *
-from datetime import datetime
-
-
-import inspect
-import io
-import textwrap
-import traceback
-import aiohttp
-from contextlib import redirect_stdout
 from discord.commands import slash_command
-
-
-import psutil
-
-import uuid
-
-from discord.commands import slash_command
-
 from pymongo import MongoClient
-
-
 
 
 
