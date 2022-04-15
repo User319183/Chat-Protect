@@ -1,48 +1,9 @@
 import discord
 
 from discord.ext import commands
-
-from discord import activity
-
-from discord.commands import Option
-
-import os
-import sys
-
-import json
-
-import asyncio as asyncio
-
-import re
-import string
-
-
-from discord.ext import *
-from discord.ext.commands import *
-from ctypes import *
 from datetime import datetime
-
-
-import inspect
-import io
-import textwrap
-import traceback
-import aiohttp
-from contextlib import redirect_stdout
 from discord.commands import slash_command
-
-
-import psutil
-
-import uuid
-
-from discord.commands import slash_command
-
-from pymongo import MongoClient
-
 import datetime, time
-
-
 
 
 global startTime
@@ -77,10 +38,10 @@ class BasicCmds(commands.Cog):
         uptime = str(datetime.timedelta(seconds=int(round(time.time()-startTime))))
         embed.add_field(name="Uptime:", value=uptime, inline=False)
         embed.add_field(name="Websocket ping:", value=f"{round(self.bot.latency * 1000)}")
-        embed.add_field(name="Version:", value="1.0.0", inline=False)
+        embed.add_field(name="Version:", value="1.0.1", inline=False)
         embed.add_field(name="Invite:", value=f"https://discord.com/oauth2/authorize?client_id=957668017079222303&permissions=8&scope=bot%20applications.commands", inline=False)
         embed.add_field(name="Support Server:", value="https://discord.gg/ecz2z36gkB", inline=False)     
-        await ctx.respond(embed=embed)
+        await ctx.respond(embed=embed, ephemeral=True)
         
         
         
@@ -92,7 +53,7 @@ class BasicCmds(commands.Cog):
     async def help(self, ctx):
         embed=discord.Embed(title="Help Panel", color=0x00ff00, description = "The command you need for help.", url="https://discord.gg/ecz2z36gkB")
         embed.add_field(name = "Please visit our help page here", value = "https://github.com/User319183/Chat-Protect/blob/main/README.md", inline = False)
-        await ctx.respond(embed=embed)
+        await ctx.respond(embed=embed, ephemeral=True)
 
         
         
