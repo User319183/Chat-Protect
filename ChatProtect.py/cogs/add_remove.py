@@ -1,43 +1,8 @@
 import discord
-
 from discord.ext import commands
-
-from discord import Embed, activity
-
 from discord.commands import Option
-
-import os
-import sys
-
-import json
-
-import asyncio as asyncio
-
 import re
-import string
-
-
-from discord.ext import *
-from discord.ext.commands import *
-from ctypes import *
-from datetime import datetime
-
-
-import inspect
-import io
-import textwrap
-import traceback
-import aiohttp
-from contextlib import redirect_stdout
 from discord.commands import slash_command
-
-
-import psutil
-
-import uuid
-
-from discord.commands import slash_command
-
 from pymongo import MongoClient
 
 
@@ -70,21 +35,27 @@ class Add_Remove(commands.Cog):
         db = client.ChatProtect
         collection = db.blacklist
         
+        #if any letter is uppercase
+        if any(c.isupper() for c in word):
+            embed=discord.Embed(title="Error", color=0x00ff00, description = "You can only add words in lowercase.")
+            return await ctx.respond(embed=embed)
+        
 
         if re.search(r"[^a-zA-Z0-9]", word):
-            return await ctx.respond("You can only add words with letters and numbers. Please remove any symbols as the bot will automaticly detect & remove them.")
+            embed=discord.Embed(title="Error", color=0x00ff00, description = "You can only add words with letters and numbers. Please remove any symbols as the bot will automaticly detect & remove them.")
+            return await ctx.respond(embed=embed)
         
 
 
         if collection.find_one({"guild_id": ctx.guild.id, "word": word}):
 
-            embed=discord.Embed(title="Error", color=0x00ff00, description = "This word is already in the censor list")
+            embed=discord.Embed(title="Error", color=0x00ff00, description = "This word is already in the censor list.")
             await ctx.respond(embed=embed)
         else:
 
             collection.insert_one({"guild_id": ctx.guild.id, "word": word})
 
-            embed=discord.Embed(title="Success", color=0x00ff00, description = "This word has successfully been added to the censor list")
+            embed=discord.Embed(title="Success", color=0x00ff00, description = "This word has successfully been added to the censor list.")
             await ctx.respond(embed=embed)
             
             
@@ -99,6 +70,16 @@ class Add_Remove(commands.Cog):
     @commands.cooldown(1, 5, commands.BucketType.member)
     async def remove(self, ctx, word: Option(str, "Enter the word to uncensor.")):
 
+        #if any letter is uppercase
+        if any(c.isupper() for c in word):
+            embed=discord.Embed(title="Error", color=0x00ff00, description = "You can only remove words in lowercase.")
+            return await ctx.respond(embed=embed)
+        
+
+        if re.search(r"[^a-zA-Z0-9]", word):
+            embed=discord.Embed(title="Error", color=0x00ff00, description = "You can only add words with letters and numbers. Please remove any symbols as the bot will automaticly detect & remove them.")
+            return await ctx.respond(embed=embed)
+            
         client = MongoClient("")
         db = client.ChatProtect
         collection = db.blacklist
