@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from discord.commands import Option
 from discord.commands import slash_command
-from pymongo import MongoClient
+from pymongo import MongoClient 
 
 
 
