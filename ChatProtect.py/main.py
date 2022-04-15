@@ -1,31 +1,7 @@
 import discord
-
 from discord.ext import commands
-
-from discord import DMChannel, activity
-
-
-import discord
-from discord.commands import Option
-
 import os
 import sys
-
-import json
-
-import asyncio as asyncio
-
-import re
-import string
-
-
-from discord.ext import *
-from discord.ext.commands import *
-from ctypes import *
-import datetime
-
-from pymongo import MongoClient
-
 from dotenv import load_dotenv
 
 
@@ -50,18 +26,10 @@ for fn in os.listdir('./cogs'):
 async def on_ready():
     print(f'{bot.user} has connected to Discord!')
     print(f'{bot.user} is running on version {discord.__version__}')
-
-
-
-
+    print(f'---------------------------------------')
+        
 
 load_dotenv()
 token = os.getenv('TOKEN')
-    
-
-
-        
-        
-    
 
 bot.run(token)
