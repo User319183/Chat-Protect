@@ -67,8 +67,8 @@ class Disable_Enable(commands.Cog):
     @commands.has_guild_permissions(manage_messages=True)
     async def embeds(self, ctx, set: Option(str, "Set if you want the censor list embeds enabled or disabled ", choices=["enabled", "disabled"]),):
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.disable_enable
+        db = client.dbname
+        collection = db.dbname
         if set == "disabled":
 
                 collection.update_one({"guild_id": ctx.guild.id}, {"$set": {"embeds": "0"}}, upsert=True)
