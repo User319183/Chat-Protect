@@ -32,8 +32,8 @@ class Add_Remove(commands.Cog):
     async def add(self, ctx, word: Option(str, "Enter the word to censor.")):
 
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.blacklist
+        db = client.dbname
+        collection = db.dbname
         
         #if any letter is uppercase
         if any(c.isupper() for c in word):
@@ -81,8 +81,8 @@ class Add_Remove(commands.Cog):
             return await ctx.respond(embed=embed)
             
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.blacklist
+        db = client.dbname
+        collection = db.dbname
 
         if collection.find_one({"guild_id": ctx.guild.id, "word": word}):
 
@@ -111,8 +111,8 @@ class Add_Remove(commands.Cog):
     async def clear_list(self, ctx):
 
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.blacklist
+        db = client.dbname
+        collection = db.dbname
         
         #if there are no words in the collection, return a message that the list is already empty
         if collection.find_one({"guild_id": ctx.guild.id}):
