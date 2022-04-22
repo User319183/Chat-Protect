@@ -70,14 +70,8 @@ class Message_Events(commands.Cog):
     async def on_message(self, message):
 
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.blacklist
-        strikescollection = db.strikes
-        bypassuserscollection = db.bypass_users
-        bypasschannelscollection = db.bypass_channels
-        bypassrolescollection = db.bypass_roles
-        enableembedscollection = db.disable_enable
-        logchannelcollection = db.logchannel
+        db = client.dbname
+        collection = db.dbname
         
         
         
