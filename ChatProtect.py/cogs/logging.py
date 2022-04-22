@@ -61,8 +61,8 @@ class Logging(commands.Cog):
     @commands.cooldown(1, 10, commands.BucketType.member)
     async def log_channel(self, ctx, channel: Option(discord.TextChannel, "Select a channel")):
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.logchannel
+        db = client.dbname
+        collection = db.dbname
 
 
         collection.update_one({"guild_id": ctx.guild.id}, {"$set": {"channel_id": channel.id}}, upsert=True)
