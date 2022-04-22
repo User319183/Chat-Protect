@@ -31,8 +31,8 @@ class Presets(commands.Cog):
     async def preset(self, ctx, filter: Option(str, "Enable a pre-built filter for the bot. All of the previous censored words will be removed. ", choices=["racisim", "badwords", "toxicity", "tenor"]),):
 
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.blacklist
+        db = client.dbname
+        collection = db.dbname
         
         if filter == "racisim":
             collection.delete_many({"guild_id": ctx.guild.id})
