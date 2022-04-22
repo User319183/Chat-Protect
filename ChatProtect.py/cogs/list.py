@@ -66,8 +66,8 @@ class List(commands.Cog):
     async def list(self, ctx):
 
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.blacklist
+        db = client.dbname
+        collection = db.dbname
         #create a list of all the words in the collection
         words = [word["word"] for word in collection.find({"guild_id": ctx.guild.id})]
 
