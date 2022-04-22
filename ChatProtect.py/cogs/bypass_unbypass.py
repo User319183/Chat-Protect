@@ -71,8 +71,8 @@ class Bypass_Unbypass(commands.Cog):
     @commands.cooldown(1, 5, commands.BucketType.member)
     async def bypass_channel(self, ctx, channel: Option(discord.TextChannel, "Select a channel")):
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.bypass_channels
+        db = client.dbname
+        collection = db.dbname
 
         if collection.find_one({"guild_id": ctx.guild.id, "channel_id": channel.id}):
             
@@ -91,8 +91,8 @@ class Bypass_Unbypass(commands.Cog):
     @commands.cooldown(1, 5, commands.BucketType.member)
     async def unbypass_channel(self, ctx, channel: Option(discord.TextChannel, "Select a channel")):
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.bypass_channels
+        db = client.dbname
+        collection = db.dbname
 
         if collection.find_one({"guild_id": ctx.guild.id, "channel_id": channel.id}):
 
@@ -119,8 +119,8 @@ class Bypass_Unbypass(commands.Cog):
     @commands.cooldown(1, 5, commands.BucketType.member)
     async def bypass_user(self, ctx, member: Option(discord.Member, "Select a member to bypass")):
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.bypass_users
+        db = client.dbname
+        collection = db.dbname
         
         if collection.find_one({"guild_id": ctx.guild.id, "member_id": member.id}):
             embed=discord.Embed(title="Error", color=0x00ff00, description = "This user has already been bypassed.")
@@ -141,8 +141,8 @@ class Bypass_Unbypass(commands.Cog):
     @commands.cooldown(1, 5, commands.BucketType.member)
     async def unbypass_user(self, ctx, member: Option(discord.Member, "Select a member to unbypass")):
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.bypass_users
+        db = client.dbname
+        collection = db.dbname
         if collection.find_one({"guild_id": ctx.guild.id, "member_id": member.id}):
                 collection.delete_one({"guild_id": ctx.guild.id, "member_id": member.id})
                 embed=discord.Embed(title="Success", color=0x00ff00, description = f"Member {member.mention} has been removed from the bypass list.")
@@ -162,8 +162,8 @@ class Bypass_Unbypass(commands.Cog):
     @commands.cooldown(1, 5, commands.BucketType.member)
     async def bypass_role(self, ctx, role: Option(discord.Role, "Select a role to bypass")):
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.bypass_roles
+        db = client.dbname
+        collection = db.dbname
         if collection.find_one({"guild_id": ctx.guild.id, "role_id": role.id}):
             embed=discord.Embed(title="Error", color=0x00ff00, description = "This role has already been bypassed.")
             await ctx.respond(embed=embed)
@@ -183,8 +183,8 @@ class Bypass_Unbypass(commands.Cog):
     @commands.cooldown(1, 5, commands.BucketType.member)
     async def unbypass_role(self, ctx, role: Option(discord.Role, "Select a role to unbypass")):
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.bypass_roles
+        db = client.dbname
+        collection = db.dbname
         if collection.find_one({"guild_id": ctx.guild.id, "role_id": role.id}):
                 collection.delete_one({"guild_id": ctx.guild.id, "role_id": role.id})
                 
@@ -204,10 +204,10 @@ class Bypass_Unbypass(commands.Cog):
     @commands.cooldown(1, 5, commands.BucketType.member)
     async def view_bypass(self, ctx):
         client = MongoClient("")
-        db = client.ChatProtect
-        collection = db.bypass_channels
-        collection2 = db.bypass_users
-        collection3 = db.bypass_roles
+        db = client.dbname
+        collection = db.dbname
+        collection2 = db.dbname
+        collection3 = db.dbname
         
         #create a list of all channels in the bypass_channels collection
         bypass_channels = []
