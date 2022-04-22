@@ -26,9 +26,9 @@ class Strikes(commands.Cog):
         else:
 
 
-            client = MongoClient("")
-            db = client.ChatProtect
-            collection = db.strikes
+        client = MongoClient("")
+        db = client.dbname
+        collection = db.dbname
 
             collection.update_one({"guild_id": ctx.guild.id, "user_id": member.id}, {"$set": {"strikes": amount}}, upsert=True)
             
@@ -51,10 +51,9 @@ class Strikes(commands.Cog):
 
         else:
 
-            client = MongoClient("")
-            db = client.ChatProtect
-            collection = db.strikes
-
+        client = MongoClient("")
+        db = client.dbname
+        collection = db.dbname
             strikes = collection.find_one({"guild_id": ctx.guild.id, "user_id": member.id})
 
             embed=discord.Embed(title="Strike Count", color=0x00ff00, description = "{} has {} strikes.".format(member.mention, strikes["strikes"]))
