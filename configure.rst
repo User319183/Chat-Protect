@@ -69,13 +69,21 @@ The `/preset` command is a command that does the words for you. The command give
 
 Strikes
 ========
-Currently, you can view & add strikes to users. Viewing strikes means you can view how many warns a moderator/the bot has given them. Updating strikes means you can
+You can view & add strikes to users. Viewing strikes means you can view how many warns a moderator/the bot has given them. Updating strikes means you can
 add or remove any amount of strikes to a user. 
 
 .. image:: https://github.com/User319183/Chat-Protect/blob/main/assets/update_strikes.png
   :width: 400
   
 .. image:: https://github.com/User319183/Chat-Protect/blob/main/assets/view_strikes.png
+  :width: 400
+  
+  
+Limit
+========
+The `/limit` command takes one value, number of strikes. When a moderator does the `/limit` command, they will be able to say the amount of strikes until members get timed out. The timeout duration is 30 minutes and as of now, this can not be changed. If you do not add a value to the `/limit` command and keep the `strikes` empty, the bot will remove the current limit (of there is one). 
+
+.. image:: https://github.com/User319183/Chat-Protect/blob/main/assets/update_strikes.png
   :width: 400
 
 Table of Contents
